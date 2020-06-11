@@ -327,6 +327,7 @@ var run = function() {
                     observe:            {enabled: true,                    misc: true, label: 'Observe Astro Events'},
                     festival:           {enabled: true,                    misc: true, label: 'Hold Festivals'},
                     autoPraise:         {enabled: true,                    misc: true, label: 'Auto Praise'},
+                    autoSacUnicorns:    {enabled: true,                    misc: true, label: 'Auto Sacrifice Unicorns'},
                     shipOverride:       {enabled: true,                    misc: true, label: 'Force Ships to 243'},
                     autofeed:           {enabled: true,                    misc: true, label: 'Feed Leviathans'},
                     hunt:               {enabled: true, subTrigger: 0.98,  misc: true, label: 'Hunt'},
@@ -1170,6 +1171,14 @@ var run = function() {
                     game.religion.praise();
                 }
             }
+	  if (optionVals.autoSacUnicorns.enabled)
+	  {
+		  if(gamePage.religionTab.sacrificeBtn.model.allLink.visible){
+                    gamePage.religionTab.sacrificeBtn.controller.transform(gamePage.religionTab.sacrificeBtn.model, 1, {}, function(result) {
+                                                if (result) {
+                                                }})
+                }
+	  }
         }
     };
 
