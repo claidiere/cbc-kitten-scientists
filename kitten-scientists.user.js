@@ -1179,7 +1179,8 @@ var run = function() {
                                                 if (result) {
                                                 }})
                 }
-		storeForSummary('tears', gamePage.resPool.get('tears').value-t);
+		storeForSummary('tears', gamePage.resPool.get('tears').value-t, 'other');
+		console.log('tears: '+gamePage.resPool.get('tears').value-t);
 	  }
         }
     };
