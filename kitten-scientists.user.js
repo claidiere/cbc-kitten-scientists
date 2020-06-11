@@ -1179,8 +1179,7 @@ var run = function() {
                                                 if (result) {
                                                 }})
                 }
-		storeForSummary('tears', gamePage.resPool.get('tears').value-t, 'other');
-		console.log('tears: '+gamePage.resPool.get('tears').value-t);
+		 storeForSummary('tears', (gamePage.resPool.get('tears').value-t), 'other');
 	  }
         }
     };
@@ -3154,6 +3153,11 @@ var run = function() {
         // Praise the Sun
         if (activitySummary.other.faith) {
             summary('Accumulated ' + game.getDisplayValueExt(activitySummary.other.faith) + ' by praising the sun');
+        }
+		
+		// Praise the Sun
+        if (activitySummary.other.tears) {
+            summary('Accumulated ' + game.getDisplayValueExt(activitySummary.other.tears) + ' tears by sacrifying unicorns');
         }
 
         // Hunters
